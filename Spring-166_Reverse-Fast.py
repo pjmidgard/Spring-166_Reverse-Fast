@@ -412,7 +412,7 @@ class compression:
                                                 else:
                                                     sda1=sda[Clock+1:Clock+25]
                                                     SDA3=SDA3+sda1
-                                                    Clock+=24
+                                                    Clock+=25
                                                 
 
                                                 #print(sda3)
