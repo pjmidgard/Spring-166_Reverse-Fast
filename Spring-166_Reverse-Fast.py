@@ -272,6 +272,8 @@ class compression:
                                                             
                                                         
                                                             if assxw3==0:
+
+                                                                
                                                                 #DR=11140083
                                                                 sda11=format(DR,'024b')
                                                                 sda2=sda11
@@ -332,6 +334,35 @@ class compression:
                                                             
                                                             C="0"+str((2**1)-1)+"b"
                                                             if assxw3==0:
+
+                                                                N1=1
+                                                                N5=0
+                                                                N6=0
+                                                                N11=2**16
+                                                               
+                                                                
+                                                             
+                                                            
+                                                                
+                                                                while N6!=1:
+                                                                        N11-=1
+                                                                        #print(N11)
+                                                                
+                                                                        long=len(sda2)
+                                                                    
+                                                                        
+                                                                        N=int(sda2,2)
+                                                                        if N==0:
+                                                                                N11=1
+                                                                                N6=1	                                    
+                                                                        if N11==0:
+                                                                                N11=(2**16)-1
+                                                                 
+                                                                        N5=N//(N11)
+                                                                        
+                                                                        N1=N%(N11)
+                                                                        
+                                                                Bias=bin(N5)[2:]
                                                                 Bias2=format(N2,C)
                                                                 
                                                                 
@@ -385,10 +416,10 @@ class compression:
                                                                 
                                                                 
                                                                 
-                                                               
+                                                                T4=format(N11,'016b')
                                                                 
                                                                 
-                                                                sda3=sda3
+                                                                sda3=T4+sda3
 
                                                                 sda3="1"+sda3
                                                                 lenf=len(sda3)
@@ -664,6 +695,42 @@ class compression:
                                                     
                                                     C="0"+str((2**1)-1)+"b"
                                                     if assxw3==0:
+
+                                                        N1=1
+                                                        N5=0
+                                                        N6=0
+                                                        N11=2**16
+                                                       
+                                                        
+                                                     
+                                                    
+                                                        
+                                                        while N6!=1:
+                                                                N11-=1
+                                                                #print(N11)
+                                                        
+                                                                long=len(sda2)
+                                                            
+                                                                
+                                                                N=int(sda2,2)
+                                                                if N==0:
+                                                                        N11=1
+                                                                        N6=1	                                    
+                                                                if N11==0:
+                                                                        N11=(2**16)-1
+                                                         
+                                                                N5=N//(N11)
+                                                                
+                                                                N1=N%(N11)
+                                                                
+                                                         
+                                                           
+                                                          
+                                                                                                   
+                                                                #print(N5)
+                                                                if N1==0 and N5!=0:
+                                                                        N6=1
+                                                                Bias=bin(N5)[2:]
                                                         Bias2=format(N2,C)
                                                         
                                                         
@@ -716,11 +783,11 @@ class compression:
                                                         sda6=sda3
                                                         
                                                         
-                                                        
+                                                        T4=format(N11,'016b')
                                                        
                                                         
                                                         
-                                                        sda3=sda3
+                                                        sda3=T4+sda3
 
                                                         sda3="1"+sda3
                                                         lenf=len(sda3)
@@ -738,7 +805,7 @@ class compression:
                                                             sda3="0"+sda1#25
                                                         else:
                                                             sda3="1"+sda3#21
-                                                        #print(sda3)
+                                                        print(sda3)
                                                         SDA3=SDA3+sda3
                                                         
                                                         assxw3=0
