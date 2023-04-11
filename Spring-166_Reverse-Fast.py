@@ -254,9 +254,10 @@ class compression:
                                         
                                             
                                 while Clock<long111:
-                                                sda1=sda[Clock:Clock+1]
+                                                sda12=""
+                                                sda12=sda[Clock:Clock+1]
                                                 
-                                                if sda1=="1":
+                                                if sda12=="1":
                                                     sda1=sda[Clock+1:Clock+21]
 
                                                     DR=2**24
