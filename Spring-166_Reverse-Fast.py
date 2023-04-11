@@ -273,8 +273,8 @@ class compression:
                                                         
                                                             if assxw3==0:
                                                                 Number_take=bin(sda[Clock+1:Clock+17])[2:]
-                                                            else:    
-                                                                DR+=Number_take
+                                                               
+                                                               
 
                                                                 
                                                                 #DR=11140083
@@ -448,12 +448,14 @@ class compression:
                                                                 #print(sda11)
                                                                 #print(len(sda1))
                                                                 #print(sda1)
+								DR+=Number_take
                                                                 
                                                                 assxw3=0
 
                                                         
                                                         SDA3=SDA3+sda11    
                                                         Clock+=21
+							
                                                         #print("F")
                                                     else:
                                                         sda1=sda[Clock+1:Clock+25]
