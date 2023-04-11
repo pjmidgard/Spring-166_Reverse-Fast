@@ -448,9 +448,10 @@ class compression:
                                                                 #print(sda11)
                                                                 #print(len(sda1))
                                                                 #print(sda1)
-								DR+=Number_take
+								
                                                                 
                                                                 assxw3=0
+                                                                DR+=Number_take
 
                                                         
                                                         SDA3=SDA3+sda11    
