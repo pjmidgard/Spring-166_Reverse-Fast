@@ -756,7 +756,7 @@ class compression:
                                                                 #print(N5)
                                                                 if N1==0 and N5!=0:
                                                                         N6=1
-                                                                Bias=bin(N5)[2:]
+                                                        Bias=bin(N5)[2:]
                                                         Bias2=format(N2,C)
                                                         
                                                         
