@@ -246,11 +246,13 @@ class compression:
                                 
                                 
                                 sda2=size_data3
+                                #print(sda2)
                                 sda=size_data3
 
                                 I=0
-                                while I!=1000:
+                                while I!=2:
                                     I+=1
+                                    #print(I)
                                     SDA3=""
                                     lenf3=len(sda2)
                                     Clock=0
@@ -260,7 +262,7 @@ class compression:
                                     while Clock<long111:
                                                     sda12=""
                                                     sda12=sda[Clock:Clock+1]
-                                                    
+                                                    #print(sda12)
                                                     if sda12=="1":
                                                         sda1=sda[Clock+1:Clock+21]
 
@@ -273,6 +275,7 @@ class compression:
                                                         
                                                             if assxw3==0:
                                                                 Number_take=bin(sda[Clock+1:Clock+17])[2:]
+                                                                #print(Number_take)
                                                                
                                                                
 
@@ -337,7 +340,11 @@ class compression:
                                                             
                                                             C="0"+str((2**5)-1)+"b"
                                                             if assxw3==0:
+                                                            	
 
+                                                                
+                                                                Bias2=format(N2,C)
+                                                                #print(Bias2)
                                                                 N1=1
                                                                 N5=0
                                                                 N6=0
@@ -452,6 +459,7 @@ class compression:
                                                                 
                                                                 assxw3=0
                                                                 DR+=Number_take
+                                                                #print(Number_take)
 
                                                         
                                                         SDA3=SDA3+sda11    
@@ -462,6 +470,7 @@ class compression:
                                                         sda1=sda[Clock+1:Clock+25]
                                                         SDA3=SDA3+sda1
                                                         Clock+=25
+                                                        #print(Clock)
                                                     
 
                                                     #print(sda3)
@@ -471,8 +480,8 @@ class compression:
 											                                                                                            
 											                                                                                            
                                             
-                                assxw1=1    
-                                    #print(assxw)
+                                    assxw=1
+                                    
                                 if assxw==1:
                                         
 
@@ -635,7 +644,7 @@ class compression:
                                         #print(I)
                                         I=0
 
-                                        while I!=1000:
+                                        while I!=2:
                                             I+=1
                                             SDA3=""
                                             
@@ -710,6 +719,9 @@ class compression:
                                                     C="0"+str((2**5)-1)+"b"
                                                     if assxw3==0:
 
+
+                                                        
+                                                        Bias2=format(N2,C)
                                                         N1=1
                                                         N5=0
                                                         N6=0
