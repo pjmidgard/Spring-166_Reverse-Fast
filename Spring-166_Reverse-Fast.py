@@ -327,12 +327,12 @@ class compression:
                                                             NS2=NS1-1-long61
                                                             Nj=len(bin(N2)[2:])
                                                             #print(N2)
-                                                            if Nj>(2**1)-1:
+                                                            if Nj>(2**5)-1:
                                                                 B=1
                                                             
                                                             
                                                             
-                                                            C="0"+str((2**1)-1)+"b"
+                                                            C="0"+str((2**5)-1)+"b"
                                                             if assxw3==0:
 
                                                                 N1=1
@@ -695,12 +695,12 @@ class compression:
                                                     NS2=NS1-1-long61
                                                     Nj=len(bin(N2)[2:])
                                                     #print(N2)
-                                                    if Nj>(2**1)-1:
+                                                    if Nj>(2**5)-1:
                                                         B=1
                                                     
                                                     
                                                     
-                                                    C="0"+str((2**1)-1)+"b"
+                                                    C="0"+str((2**5)-1)+"b"
                                                     if assxw3==0:
 
                                                         N1=1
@@ -820,6 +820,7 @@ class compression:
                                                             sda3="1"+sda3#21
                                                         #print(sda3)
                                                         SDA3=SDA3+sda3
+                                                        
                                                         
                                                         assxw3=0
                                 
