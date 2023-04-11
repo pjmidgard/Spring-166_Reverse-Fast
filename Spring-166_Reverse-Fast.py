@@ -805,7 +805,7 @@ class compression:
                                                             sda3="0"+sda1#25
                                                         else:
                                                             sda3="1"+sda3#21
-                                                        print(sda3)
+                                                        #print(sda3)
                                                         SDA3=SDA3+sda3
                                                         
                                                         assxw3=0
