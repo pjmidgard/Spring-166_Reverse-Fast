@@ -373,10 +373,17 @@ class compression:
                                                                    
                                                        
                                                             if B==0:
-                                                                sda3="1"+Bias+sda2[long-N2:]
+                                                                if assxw3==0:
+                                                                    sda3="1"+Bias+sda2
+                                                                else:
+                                                                    sda3="1"+Bias+sda2[long-N2:]
                                                             #print(N2)
                                                             if B==1:
-                                                                sda3="0"+Bias+sda2[long-N2:]
+                                                                if assxw3==0:
+                                                                    sda3="0"+Bias+sda2
+                                                                else:
+                                                                    sda3="0"+Bias+sda2[long-N2:]
+                                                                
                                                             
                                                             sda8=""
                                                             Circle=0
@@ -741,10 +748,16 @@ class compression:
                                                            
                                                
                                                     if B==0:
-                                                        sda3="1"+Bias+sda2[long-N2:]
+                                                        if assxw3==0:
+                                                            sda3="1"+Bias+sda2
+                                                        else:
+                                                            sda3="1"+Bias+sda2[long-N2:]
                                                     #print(N2)
                                                     if B==1:
-                                                        sda3="0"+Bias+sda2[long-N2:]
+                                                        if assxw3==0:
+                                                            sda3="0"+Bias+sda2
+                                                        else:
+                                                            sda3="0"+Bias+sda2[long-N2:]
                                                     
                                                     sda8=""
                                                     Circle=0
