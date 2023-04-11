@@ -264,14 +264,17 @@ class compression:
                                                     if sda12=="1":
                                                         sda1=sda[Clock+1:Clock+21]
 
-                                                        DR=2**24
+                                                        DR=0
                                                         sda11=""
 
                                                         while sda1!=sda3:
-                                                            DR-=1
+                                                            
                                                             
                                                         
                                                             if assxw3==0:
+                                                                Number_take=bin(sda[Clock+1:Clock+17])[2:]
+                                                                
+                                                                DR+=Number_take
 
                                                                 
                                                                 #DR=11140083
@@ -670,6 +673,7 @@ class compression:
                                                     N8=len(sda2)
                                                     while N1!=0:
                                                         N2+=1
+                                                        
                                                         long=len(sda2)
                                                         long2=long-N2
                                                         if long2<=0:
