@@ -247,182 +247,186 @@ class compression:
                                 
                                 sda2=size_data3
                                 sda=size_data3
-                                SDA3=""
-                                lenf3=len(sda2)
-                                Clock=0
-                                long111=len(sda)
-                                        
+
+                                I=0
+                                while I!=1000:
+                                    I+=1
+                                    SDA3=""
+                                    lenf3=len(sda2)
+                                    Clock=0
+                                    long111=len(sda)
                                             
-                                while Clock<long111:
-                                                sda12=""
-                                                sda12=sda[Clock:Clock+1]
                                                 
-                                                if sda12=="1":
-                                                    sda1=sda[Clock+1:Clock+21]
-
-                                                    DR=2**24
-                                                    sda11=""
-
-                                                    while sda1!=sda3:
-                                                        DR-=1
-                                                        
+                                    while Clock<long111:
+                                                    sda12=""
+                                                    sda12=sda[Clock:Clock+1]
                                                     
-                                                        if assxw3==0:
-                                                            #DR=11140083
-                                                            sda11=format(DR,'024b')
-                                                            sda2=sda11
-                                                        lenf2=len(sda2)  
-                                                        block3=0
-                                                        sda3=""
-                                                        sda5=""
-                                                        sda8=""
-                                                        sda4=""
+                                                    if sda12=="1":
+                                                        sda1=sda[Clock+1:Clock+21]
+
+                                                        DR=2**24
+                                                        sda11=""
+
+                                                        while sda1!=sda3:
+                                                            DR-=1
+                                                            
                                                         
-                                                        count3+=1
-                                                        #print(count4)
-                                                        #######################################################Jurijus Pacalovas Exection Program######################################################################################
-                                                        #print(len(sda2))
-                                                        F=0
-                                                        B=0
-                                                        count4=-1
-                                                     
-                                                        lenf2=len(sda2)
-                                                        #print(lenf2)
-                                                        N2=-1
-                                                        N1=1
-                                                        N5=0
-                                                        long2=1
-                                                        
-                                                        N8=len(sda2)
-                                                        while N1!=0:
-                                                            N2+=1
-                                                            long=len(sda2)
-                                                            long2=long-N2
-                                                            if long2<=0:
-                                                                B=1
-                                                                N1=0
-                                                            if B==0:
-                                                                N=int(sda2[:long-N2],2)
-                                                                if N==0:
+                                                            if assxw3==0:
+                                                                #DR=11140083
+                                                                sda11=format(DR,'024b')
+                                                                sda2=sda11
+                                                            lenf2=len(sda2)  
+                                                            block3=0
+                                                            sda3=""
+                                                            sda5=""
+                                                            sda8=""
+                                                            sda4=""
+                                                            
+                                                            count3+=1
+                                                            #print(count4)
+                                                            #######################################################Jurijus Pacalovas Exection Program######################################################################################
+                                                            #print(len(sda2))
+                                                            F=0
+                                                            B=0
+                                                            count4=-1
+                                                         
+                                                            lenf2=len(sda2)
+                                                            #print(lenf2)
+                                                            N2=-1
+                                                            N1=1
+                                                            N5=0
+                                                            long2=1
+                                                            
+                                                            N8=len(sda2)
+                                                            while N1!=0:
+                                                                N2+=1
+                                                                long=len(sda2)
+                                                                long2=long-N2
+                                                                if long2<=0:
                                                                     B=1
                                                                     N1=0
-                                                                N5=N//((2**4)-1)
-                                                                N1=N%((2**4)-1)
+                                                                if B==0:
+                                                                    N=int(sda2[:long-N2],2)
+                                                                    if N==0:
+                                                                        B=1
+                                                                        N1=0
+                                                                    N5=N//((2**4)-1)
+                                                                    N1=N%((2**4)-1)
+                                                                #print(N2)
+                                                            Bias=bin(N5)[2:]
+                                                            if N5==0:
+                                                                B=1
+                                                            long61=len(Bias)
+                                                            long62=0
+                                                            if B==0:
+                                                                long62=len(sda2[long-N2:])
+                                                            NS=long61
+                                                            NS1=N8-long62
+                                                            NS2=NS1-1-long61
+                                                            Nj=len(bin(N2)[2:])
                                                             #print(N2)
-                                                        Bias=bin(N5)[2:]
-                                                        if N5==0:
-                                                            B=1
-                                                        long61=len(Bias)
-                                                        long62=0
-                                                        if B==0:
-                                                            long62=len(sda2[long-N2:])
-                                                        NS=long61
-                                                        NS1=N8-long62
-                                                        NS2=NS1-1-long61
-                                                        Nj=len(bin(N2)[2:])
-                                                        #print(N2)
-                                                        if Nj>(2**1)-1:
-                                                            B=1
-                                                        
-                                                        
-                                                        
-                                                        C="0"+str((2**1)-1)+"b"
-                                                        if assxw3==0:
-                                                            Bias2=format(N2,C)
+                                                            if Nj>(2**1)-1:
+                                                                B=1
                                                             
                                                             
                                                             
-                                                            
-                                                                                
-                                                        Bias3=format(N2,C)
-                                                               
-                                                   
-                                                        if B==0:
-                                                            sda3="1"+Bias+sda2[long-N2:]
-                                                        #print(N2)
-                                                        if B==1:
-                                                            sda3="0"+Bias+sda2[long-N2:]
-                                                        
-                                                        sda8=""
-                                                        Circle=0
-                                                        Long888=len(sda3)
-                                                        while Circle<Long888:
-                                                          if sda3[Circle:Circle+1]=="0":
-                                                            
-                                                            sda8=sda8+"1"
-                                                          if sda3[Circle:Circle+1]=="1":  
-                                                            sda8=sda8+"0"
-                                                          Circle+=1
-
-                                                        sda3=sda8
-                                                        sda2=sda3
-                                                        #print(len(sda3))
-                                                        #n = int(sda2, 2)
-                                                                                                                        
+                                                            C="0"+str((2**1)-1)+"b"
+                                                            if assxw3==0:
+                                                                Bias2=format(N2,C)
                                                                 
-                                                        #n = int(sda2, 2)                                                                                     
                                                                 
-                                                        #qqwslenf=len(sda2)
-                                                        #qqwslenf=(qqwslenf/8)*2
-                                                        #qqwslenf=str(qqwslenf)
-                                                        #qqwslenf="%0"+qqwslenf+"x"
-                                                        #jl=binascii.unhexlify(qqwslenf % n)
-                                                        #print(len(jl))
-                                                        #
-                                                        #
-                                                        #print(len(jl))
-                                                        
-                                                        assxw3+=1  
-                                                        if assxw3==2**15:
-                                                            #print(Bias2)
+                                                                
+                                                                
+                                                                                    
+                                                            Bias3=format(N2,C)
+                                                                   
+                                                       
+                                                            if B==0:
+                                                                sda3="1"+Bias+sda2[long-N2:]
+                                                            #print(N2)
+                                                            if B==1:
+                                                                sda3="0"+Bias+sda2[long-N2:]
+                                                            
+                                                            sda8=""
+                                                            Circle=0
+                                                            Long888=len(sda3)
+                                                            while Circle<Long888:
+                                                              if sda3[Circle:Circle+1]=="0":
+                                                                
+                                                                sda8=sda8+"1"
+                                                              if sda3[Circle:Circle+1]=="1":  
+                                                                sda8=sda8+"0"
+                                                              Circle+=1
 
-                                                            sda3=Bias3+Bias2+sda3
-                                                            sda6=sda3
-                                                            
-                                                            
-                                                            
-                                                           
-                                                            
-                                                            
-                                                            sda3=sda3
-
-                                                            sda3="1"+sda3
-                                                            lenf=len(sda3)
-                                                            add_bits118=""
-                                                            count_bits=20-lenf%20
-                                                            z=0
-                                                            if count_bits!=20:
-                                                                while z<count_bits:
-                                                                        add_bits118="0"+add_bits118
-                                                                        z=z+1
-                                                                sda3=add_bits118+sda3
-                                                            
+                                                            sda3=sda8
+                                                            sda2=sda3
                                                             #print(len(sda3))
-                                                            #print(sda3)
-
-                                                            #print(sda11)
-                                                            #print(len(sda1))
-                                                            #print(sda1)
+                                                            #n = int(sda2, 2)
+                                                                                                                            
+                                                                    
+                                                            #n = int(sda2, 2)                                                                                     
+                                                                    
+                                                            #qqwslenf=len(sda2)
+                                                            #qqwslenf=(qqwslenf/8)*2
+                                                            #qqwslenf=str(qqwslenf)
+                                                            #qqwslenf="%0"+qqwslenf+"x"
+                                                            #jl=binascii.unhexlify(qqwslenf % n)
+                                                            #print(len(jl))
+                                                            #
+                                                            #
+                                                            #print(len(jl))
                                                             
-                                                            assxw3=0
+                                                            assxw3+=1  
+                                                            if assxw3==2**15:
+                                                                #print(Bias2)
 
-                                                    
-                                                    SDA3=SDA3+sda11    
-                                                    Clock+=21
-                                                    #print("F")
-                                                else:
-                                                    sda1=sda[Clock+1:Clock+25]
-                                                    SDA3=SDA3+sda1
-                                                    Clock+=25
-                                                
+                                                                sda3=Bias3+Bias2+sda3
+                                                                sda6=sda3
+                                                                
+                                                                
+                                                                
+                                                               
+                                                                
+                                                                
+                                                                sda3=sda3
 
-                                                #print(sda3)
+                                                                sda3="1"+sda3
+                                                                lenf=len(sda3)
+                                                                add_bits118=""
+                                                                count_bits=20-lenf%20
+                                                                z=0
+                                                                if count_bits!=20:
+                                                                    while z<count_bits:
+                                                                            add_bits118="0"+add_bits118
+                                                                            z=z+1
+                                                                    sda3=add_bits118+sda3
+                                                                
+                                                                #print(len(sda3))
+                                                                #print(sda3)
+
+                                                                #print(sda11)
+                                                                #print(len(sda1))
+                                                                #print(sda1)
+                                                                
+                                                                assxw3=0
+
+                                                        
+                                                        SDA3=SDA3+sda11    
+                                                        Clock+=21
+                                                        #print("F")
+                                                    else:
+                                                        sda1=sda[Clock+1:Clock+25]
+                                                        SDA3=SDA3+sda1
+                                                        Clock+=25
                                                     
-                                                
+
+                                                    #print(sda3)
+                                                        
+                                                    
+                                    sda=SDA3                                                                                                                                                    
 											                                                                                            
 											                                                                                            
-											                                                                                            
-                                    
+                                            
                                 assxw1=1    
                                     #print(assxw)
                                 if assxw==1:
@@ -585,155 +589,161 @@ class compression:
                                        
                                         
                                         #print(I)
-                                        SDA3=""
-                                        
-                                        lenf3=len(sda2)
-                                        Clock=0
-                                        long111=len(sda)
-                                        
+                                        I=0
+
+                                        while I!=1000:
+                                            I+=1
+                                            SDA3=""
                                             
-                                        while Clock<long111:
-                                                sda1=sda[Clock:Clock+24]
+                                            lenf3=len(sda2)
+                                            Clock=0
+                                            long111=len(sda)
+
+                                            
+                                            
                                                 
-                                                if assxw3==0:
-                                                    sda2=sda1
-                                                lenf2=len(sda2)  
-                                                block3=0
-                                                sda3=""
-                                                sda5=""
-                                                sda8=""
-                                                sda4=""
-                                                
-                                                count3+=1
-                                                #print(count4)
-                                                #######################################################Jurijus Pacalovas Exection Program######################################################################################
-                                                #print(len(sda2))
-                                                F=0
-                                                B=0
-                                                count4=-1
-                                             
-                                                lenf2=len(sda2)
-                                                #print(lenf2)
-                                                N2=-1
-                                                N1=1
-                                                N5=0
-                                                long2=1
-                                                
-                                                N8=len(sda2)
-                                                while N1!=0:
-                                                    N2+=1
-                                                    long=len(sda2)
-                                                    long2=long-N2
-                                                    if long2<=0:
-                                                        B=1
-                                                        N1=0
-                                                    if B==0:
-                                                        N=int(sda2[:long-N2],2)
-                                                        if N==0:
+                                            while Clock<long111:
+                                                    sda1=sda[Clock:Clock+24]
+                                                    
+                                                    if assxw3==0:
+                                                        sda2=sda1
+                                                    lenf2=len(sda2)  
+                                                    block3=0
+                                                    sda3=""
+                                                    sda5=""
+                                                    sda8=""
+                                                    sda4=""
+                                                    
+                                                    count3+=1
+                                                    #print(count4)
+                                                    #######################################################Jurijus Pacalovas Exection Program######################################################################################
+                                                    #print(len(sda2))
+                                                    F=0
+                                                    B=0
+                                                    count4=-1
+                                                 
+                                                    lenf2=len(sda2)
+                                                    #print(lenf2)
+                                                    N2=-1
+                                                    N1=1
+                                                    N5=0
+                                                    long2=1
+                                                    
+                                                    N8=len(sda2)
+                                                    while N1!=0:
+                                                        N2+=1
+                                                        long=len(sda2)
+                                                        long2=long-N2
+                                                        if long2<=0:
                                                             B=1
                                                             N1=0
-                                                        N5=N//((2**4)-1)
-                                                        N1=N%((2**4)-1)
+                                                        if B==0:
+                                                            N=int(sda2[:long-N2],2)
+                                                            if N==0:
+                                                                B=1
+                                                                N1=0
+                                                            N5=N//((2**4)-1)
+                                                            N1=N%((2**4)-1)
+                                                        #print(N2)
+                                                    Bias=bin(N5)[2:]
+                                                    if N5==0:
+                                                        B=1
+                                                    long61=len(Bias)
+                                                    long62=0
+                                                    if B==0:
+                                                        long62=len(sda2[long-N2:])
+                                                    NS=long61
+                                                    NS1=N8-long62
+                                                    NS2=NS1-1-long61
+                                                    Nj=len(bin(N2)[2:])
                                                     #print(N2)
-                                                Bias=bin(N5)[2:]
-                                                if N5==0:
-                                                    B=1
-                                                long61=len(Bias)
-                                                long62=0
-                                                if B==0:
-                                                    long62=len(sda2[long-N2:])
-                                                NS=long61
-                                                NS1=N8-long62
-                                                NS2=NS1-1-long61
-                                                Nj=len(bin(N2)[2:])
-                                                #print(N2)
-                                                if Nj>(2**1)-1:
-                                                    B=1
-                                                
-                                                
-                                                
-                                                C="0"+str((2**1)-1)+"b"
-                                                if assxw3==0:
-                                                    Bias2=format(N2,C)
+                                                    if Nj>(2**1)-1:
+                                                        B=1
                                                     
                                                     
                                                     
+                                                    C="0"+str((2**1)-1)+"b"
+                                                    if assxw3==0:
+                                                        Bias2=format(N2,C)
+                                                        
+                                                        
+                                                        
+                                                        
+                                                                            
+                                                    Bias3=format(N2,C)
+                                                           
+                                               
+                                                    if B==0:
+                                                        sda3="1"+Bias+sda2[long-N2:]
+                                                    #print(N2)
+                                                    if B==1:
+                                                        sda3="0"+Bias+sda2[long-N2:]
                                                     
-                                                                        
-                                                Bias3=format(N2,C)
+                                                    sda8=""
+                                                    Circle=0
+                                                    Long888=len(sda3)
+                                                    while Circle<Long888:
+                                                      if sda3[Circle:Circle+1]=="0":
+                                                        
+                                                        sda8=sda8+"1"
+                                                      if sda3[Circle:Circle+1]=="1":  
+                                                        sda8=sda8+"0"
+                                                      Circle+=1
+
+                                                    sda3=sda8
+                                                    sda2=sda3
+                                                    #print(len(sda3))
+                                                    #n = int(sda2, 2)
+                                                                                                                    
+                                                            
+                                                    #n = int(sda2, 2)                                                                                     
+                                                            
+                                                    #qqwslenf=len(sda2)
+                                                    #qqwslenf=(qqwslenf/8)*2
+                                                    #qqwslenf=str(qqwslenf)
+                                                    #qqwslenf="%0"+qqwslenf+"x"
+                                                    #jl=binascii.unhexlify(qqwslenf % n)
+                                                    #print(len(jl))
+                                                    #
+                                                    #
+                                                    #print(len(jl))
+                                                    
+                                                    assxw3+=1  
+                                                    if assxw3==2**15:
+                                                        #print(Bias2)
+
+                                                        sda3=Bias3+Bias2+sda3
+                                                        sda6=sda3
+                                                        
+                                                        
+                                                        
                                                        
-                                           
-                                                if B==0:
-                                                    sda3="1"+Bias+sda2[long-N2:]
-                                                #print(N2)
-                                                if B==1:
-                                                    sda3="0"+Bias+sda2[long-N2:]
-                                                
-                                                sda8=""
-                                                Circle=0
-                                                Long888=len(sda3)
-                                                while Circle<Long888:
-                                                  if sda3[Circle:Circle+1]=="0":
-                                                    
-                                                    sda8=sda8+"1"
-                                                  if sda3[Circle:Circle+1]=="1":  
-                                                    sda8=sda8+"0"
-                                                  Circle+=1
-
-                                                sda3=sda8
-                                                sda2=sda3
-                                                #print(len(sda3))
-                                                #n = int(sda2, 2)
-                                                                                                                
                                                         
-                                                #n = int(sda2, 2)                                                                                     
                                                         
-                                                #qqwslenf=len(sda2)
-                                                #qqwslenf=(qqwslenf/8)*2
-                                                #qqwslenf=str(qqwslenf)
-                                                #qqwslenf="%0"+qqwslenf+"x"
-                                                #jl=binascii.unhexlify(qqwslenf % n)
-                                                #print(len(jl))
-                                                #
-                                                #
-                                                #print(len(jl))
-                                                
-                                                assxw3+=1  
-                                                if assxw3==2**15:
-                                                    #print(Bias2)
+                                                        sda3=sda3
 
-                                                    sda3=Bias3+Bias2+sda3
-                                                    sda6=sda3
-                                                    
-                                                    
-                                                    
-                                                   
-                                                    
-                                                    
-                                                    sda3=sda3
-
-                                                    sda3="1"+sda3
-                                                    lenf=len(sda3)
-                                                    add_bits118=""
-                                                    count_bits=20-lenf%20
-                                                    z=0
-                                                    
-                                                    while z<count_bits:
-                                                            add_bits118="0"+add_bits118
-                                                            z=z+1
-                                                    sda3=add_bits118+sda3
-                                                    Clock+=24
-                                                    #print(len(sda6))
-                                                    if len(sda3)!=20:
-                                                        sda3="0"+sda1#25
-                                                    else:
-                                                        sda3="1"+sda3#21
-                                                    #print(sda3)
-                                                    SDA3=SDA3+sda3
-                                                    
-                                                    assxw3=0
+                                                        sda3="1"+sda3
+                                                        lenf=len(sda3)
+                                                        add_bits118=""
+                                                        count_bits=20-lenf%20
+                                                        z=0
+                                                        
+                                                        while z<count_bits:
+                                                                add_bits118="0"+add_bits118
+                                                                z=z+1
+                                                        sda3=add_bits118+sda3
+                                                        Clock+=24
+                                                        #print(len(sda6))
+                                                        if len(sda3)!=20:
+                                                            sda3="0"+sda1#25
+                                                        else:
+                                                            sda3="1"+sda3#21
+                                                        #print(sda3)
+                                                        SDA3=SDA3+sda3
+                                                        
+                                                        assxw3=0
                                 
-                                        #print(sda)
+                                            sda=SDA3
                                     assxw=1
                                     #print(assxw)
                                     if assxw==1:
