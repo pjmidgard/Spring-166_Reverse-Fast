@@ -273,7 +273,7 @@ class compression:
                                                         
                                                             if assxw3==0:
                                                                 Number_take=bin(sda[Clock+1:Clock+17])[2:]
-                                                                
+                                                            else:    
                                                                 DR+=Number_take
 
                                                                 
